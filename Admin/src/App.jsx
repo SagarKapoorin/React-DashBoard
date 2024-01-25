@@ -10,7 +10,7 @@ import Contacts from "./Scenes/Contacts/Contact";
 import Form from "./Scenes/Form/Form";
 // import Line from "./Scenes/line";
 // import Pie from "./Scenes/pie";
-// import FAQ from "./Scenes/faq";
+import FAQ from "./Scenes/Faq/faq"
 // import Geography from "./Scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
@@ -38,7 +38,7 @@ function App() {
               {/* <Route path="/bar" element={<Bar />} /> */}
               {/* <Route path="/pie" element={<Pie />} /> */}
               {/* <Route path="/line" element={<Line />} /> */}
-              {/* <Route path="/faq" element={<FAQ />} /> */}
+              <Route path="/faq" element={<FAQ />} />
               <Route path="/calendar" element={<Calendar />} />
               {/* <Route path="/geography" element={<Geography />} /> */}
             </Routes>
