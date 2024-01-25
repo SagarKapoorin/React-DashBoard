@@ -45,6 +45,7 @@ const Sidebar=()=>{
         sx={{ //changing pro sidebar css 
           "& .pro-sidebar-inner": {
             background: `${colors.primary[400]} !important`,
+            height:"750px !important",
           },
           "& .pro-icon-wrapper": {
             backgroundColor: "transparent !important",
@@ -60,7 +61,7 @@ const Sidebar=()=>{
           },
         }}
       >
-        <ProSidebar collapsed={isCollapsed}>
+        <ProSidebar collapsed={isCollapsed} >
           <Menu >
             {/* LOGO AND MENU ICON */}
             <MenuItem
