@@ -13,7 +13,7 @@ const Header=()=>{
     // accessing theme
     const theme=useTheme();
     const colors=tokens(theme.palette.mode);
-    const colorMode=useContext(colors);
+    const colorMode = useContext(ColorModeContext);
     return(
     <Box display="flex" justifyContent="space-between" p={2}>
      {/* SEARCH BAR */}
