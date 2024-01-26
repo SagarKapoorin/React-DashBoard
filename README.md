@@ -48,7 +48,7 @@ This repository contains the code for a dashboard application built using variou
 
 1. Clone the repository:
    ```
-   git clone <repository_url>
+   git clone https://github.com/SagarKapoorin/React-DashBoard.git
    ```
 
 2. Navigate to the project directory:
