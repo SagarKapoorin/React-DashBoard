@@ -16,9 +16,14 @@ const PieChart = () => {
               stroke: colors.grey[100],
             },
           },
+          tooltip: {
+            text:{
+              fill:"dark",
+            }
+          },
           legend: {
             text: {
-              fill: colors.grey[100],
+              fill: "dark",
             },
           },
           ticks: {
@@ -96,7 +101,7 @@ const PieChart = () => {
             {
               on: "hover",
               style: {
-                itemTextColor: "#000",
+                itemTextColor: "#fff",
               },
             },
           ],
