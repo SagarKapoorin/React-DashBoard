@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState ,useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./Scenes/Global/Header";
 import Sidebar from "./Scenes/Global/Sidebar";
@@ -12,7 +12,7 @@ import Line from "./Scenes/line";
 import Pie from "./Scenes/pie";
 import FAQ from "./Scenes/Faq/faq"
 import Geography from "./Scenes/geography";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider , useMediaQuery } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Calendar from "./Scenes/Calender/Calender";
 function App() {

@@ -1,7 +1,7 @@
 import { Menu,MenuItem,ProSidebar } from "react-pro-sidebar";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import 'react-pro-sidebar/dist/css/styles.css';
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, useTheme , useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -40,6 +40,12 @@ const Sidebar=()=>{
     const colors = tokens(theme.palette.mode);
     const [isCollapsed, setIsCollapsed] = useState(false);   // collasping sidebar
     const [selected, setSelected] = useState("Dashboard");   //to know page on which we are
+    const isSmallScreen = useMediaQuery("(max-width:1090px)");
+    useEffect(() => {
+      if (isSmallScreen) {
+        setIsCollapsed(true);
+      }
+    }, [isSmallScreen]);
     return(
         <Box
         sx={{ //changing pro sidebar css 
@@ -108,12 +114,12 @@ const Sidebar=()=>{
                     variant="h2"
                     color={colors.grey[100]}
                     fontWeight="bold"
-                    sx={{ m: "10px 0 0 0" }}
+                    sx={{ m: "10px 0 10px 0" }}
                   >
-                    Ed Roh
+                    Sagar
                   </Typography>
                   <Typography variant="h5" color={colors.greenAccent[300]}   fontWeight="bold">
-                    VP Fancy Admin
+                    VIP Admin
                   </Typography>
                 </Box>
               </Box>

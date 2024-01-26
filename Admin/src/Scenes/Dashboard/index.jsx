@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Button, IconButton, Typography, useTheme ,useMediaQuery } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockTransactions } from "../../Data/fakeData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
@@ -17,7 +17,8 @@ import ProgressCircle from "../../Components/ProgressCircle";
 const Dashboard=()=>{
     const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  const isSmallScreen = useMediaQuery("(max-width:1090px)");
+  const isSuperSmallScreen =useMediaQuery("(max-width:883px)")
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -45,11 +46,11 @@ const Dashboard=()=>{
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
         gridAutoRows="140px"
-        gap="20px"
+        gap={isSmallScreen?"5px":"20px"}
       >
         {/* ROW 1 */}
         <Box
-          gridColumn="span 3"
+           gridColumn={isSuperSmallScreen ? "span 5" : "span 3"} 
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -68,7 +69,7 @@ const Dashboard=()=>{
           />
         </Box>
         <Box
-          gridColumn="span 3"
+           gridColumn={isSuperSmallScreen ? "span 5" : "span 3"} // Change grid column span for super small screens
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -87,7 +88,7 @@ const Dashboard=()=>{
           />
         </Box>
         <Box
-          gridColumn="span 3"
+           gridColumn={isSuperSmallScreen ? "span 5" : "span 3"} // Change grid column span for super small screens
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -106,7 +107,7 @@ const Dashboard=()=>{
           />
         </Box>
         <Box
-          gridColumn="span 3"
+           gridColumn={isSuperSmallScreen ? "span 5" : "span 3"} // Change grid column span for super small screens
           backgroundColor={colors.primary[400]}
           display="flex"
           alignItems="center"
@@ -127,7 +128,7 @@ const Dashboard=()=>{
 
         {/* ROW 2 */}
         <Box
-          gridColumn="span 8"
+          gridColumn={isSuperSmallScreen ? "span 12" : "span 8"} // Change grid column span for super small screens
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
@@ -167,7 +168,7 @@ const Dashboard=()=>{
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
+          gridColumn={isSuperSmallScreen ? "span 5" : "span 4"} // Change grid column span for super small screens
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           overflow="auto"
@@ -219,7 +220,7 @@ const Dashboard=()=>{
 
         {/* ROW 3 */}
         <Box
-          gridColumn="span 4"
+           gridColumn={isSuperSmallScreen ? "span 7" : "span 4"} // Change grid column span for super small screens
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="30px"
@@ -245,7 +246,7 @@ const Dashboard=()=>{
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
+           gridColumn={isSuperSmallScreen ? "span 12" : "span 3"} // Change grid column span for super small screens
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
@@ -261,7 +262,7 @@ const Dashboard=()=>{
           </Box>
         </Box>
         <Box
-          gridColumn="span 4"
+           gridColumn={isSuperSmallScreen ? "span 12" : "span 4"} // Change grid column span for super small screens
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           padding="30px"
