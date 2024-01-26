@@ -45,7 +45,7 @@ const Sidebar=()=>{
         sx={{ //changing pro sidebar css 
           "& .pro-sidebar-inner": {
             background: `${colors.primary[400]} !important`,
-            height:"750px !important",
+            height:"950px !important",
           },
           "& .pro-icon-wrapper": {
             backgroundColor: "transparent !important",
@@ -54,10 +54,10 @@ const Sidebar=()=>{
             padding: "5px 35px 5px 20px !important",
           },
           "& .pro-inner-item:hover": {
-            color: "#868dfb !important",
+            color: "red !important",
           },
           "& .pro-menu-item.active": {
-            color: "#6870fa !important",
+            color: `red !important`,
           },
         }}
       >
@@ -112,7 +112,7 @@ const Sidebar=()=>{
                   >
                     Ed Roh
                   </Typography>
-                  <Typography variant="h5" color={colors.greenAccent[500]}>
+                  <Typography variant="h5" color={colors.greenAccent[300]}   fontWeight="bold">
                     VP Fancy Admin
                   </Typography>
                 </Box>
@@ -126,12 +126,13 @@ const Sidebar=()=>{
                 icon={<HomeOutlinedIcon />}
                 selected={selected}
                 setSelected={setSelected}
+              
               />
   
               <Typography
                 variant="h6"
                 color={colors.grey[300]}
-                sx={{ m: "15px 0 5px 20px" }}
+                sx={{ m: "15px 0 5px 20px", fontSize:"18px" ,fontWeight:"900" }}
               >
                 Data
               </Typography>
@@ -160,7 +161,7 @@ const Sidebar=()=>{
               <Typography
                 variant="h6"
                 color={colors.grey[300]}
-                sx={{ m: "15px 0 5px 20px" }}
+                sx={{ m: "15px 0 5px 20px" , fontSize:"18px" ,fontWeight:"900" }}
               >
                 Pages
               </Typography>
@@ -189,7 +190,7 @@ const Sidebar=()=>{
               <Typography
                 variant="h6"
                 color={colors.grey[300]}
-                sx={{ m: "15px 0 5px 20px" }}
+                sx={{ m: "15px 0 5px 20px" , fontSize:"18px" ,fontWeight:"900" }}
               >
                 Charts
               </Typography>

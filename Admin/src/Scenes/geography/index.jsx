@@ -18,6 +18,7 @@ const Geography = () => {
         <GeographyChart />
       </Box>
     </Box>
+    
   );
 };
 
